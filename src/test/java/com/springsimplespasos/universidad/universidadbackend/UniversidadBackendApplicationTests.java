@@ -8,35 +8,31 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class UniversidadBackendApplicationTests {
-
 	Calculadora calculadora = new Calculadora();
 
 	@Test
-	@DisplayName("Suma de valorA y ValorB")
-	void sumaDeValores() {
+	@DisplayName("Suma de valorA y valorB")
+	void sumaDeValores(){
 		//given
-		int valorA = 3;
-		int valorB = 2;
-
+		int valorA = 2;
+		int valorB = 3;
 		//when
-		int expectativa = calculadora.sumar(valorA, valorB);
-
+		int resultadoEsperado = calculadora.sumar(valorA, valorB);
+		int expectativa = 5;
 		//then
-		int resultadoExperado = 5;
-		assertThat(expectativa).isEqualTo(resultadoExperado);
+		assertThat(expectativa).isEqualTo(resultadoEsperado);
 	}
 
 	@Test
 	@DisplayName("Test deprecado")
 	@Disabled("Test deprecado")
-	void testDesactivado(){
-
-	}
+	void testDesactivado(){}
 
 	class Calculadora{
 		int sumar(int valor_a, int valor_b){
-			return valor_a + valor_b;
+			return  valor_a +  valor_b;
 		}
 	}
+
 
 }

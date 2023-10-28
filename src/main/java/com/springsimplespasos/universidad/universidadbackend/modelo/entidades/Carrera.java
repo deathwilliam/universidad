@@ -41,11 +41,15 @@ public class Carrera implements Serializable {
     public Carrera() {
     }
 
-    public Carrera(Integer id, String nombre, Integer cantidaMaterias, Integer cantidadAnios) {
+    public Carrera(Integer id, String nombre, Integer cantidaMaterias, Integer cantidadAnios, LocalDateTime fechaAlta, LocalDateTime fechaModificacion
+                   ) {
         this.id = id;
         this.nombre = nombre;
         this.cantidaMaterias = cantidaMaterias;
         this.cantidadAnios = cantidadAnios;
+        this.fechaAlta = fechaAlta;
+        this.fechaModificacion = fechaModificacion;
+
     }
 
     public Integer getId() {
